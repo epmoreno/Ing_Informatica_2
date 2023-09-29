@@ -1,0 +1,24 @@
+- clock_t es un nuevo tipo de dato que representa cantidades de ticks de reloj.
+
+- CLOCKS_PER_SEC es una macro que vale el número de ticks por segundo que es capaz
+de realizar nuestro sistema.
+
+- clock() es una función que devuelve el número de ticks que han transcurrido desde
+un momento determinado. Generalmente estos ticks son referidos al comienzo de la
+ejecución pero esto puede variar.
+
+----------------------------------------------------------------------------------------
+
+clock_t tini; // Anotamos el tiempo de inicio
+tini=clock();
+
+//Algoritmo
+//...
+
+clock_t tfin;
+tfin=clock;
+
+// Mostramos resultados
+cout << "Ticks de reloj : " << tfin-tini << endl; / fin - inicio
+cout << "Segundos : " << (tfin-tini)/(double)CLOCKS_PER_SEC << endl; / Conversion a Segundos
+

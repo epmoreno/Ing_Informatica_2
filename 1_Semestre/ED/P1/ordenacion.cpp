@@ -7,3 +7,8 @@ void ordenar(int *v, int n) {
                 v[j+1] = aux;
             }
 }
+int main(int argc, char const *argv[])
+{
+    /* code */
+    return 0;
+}

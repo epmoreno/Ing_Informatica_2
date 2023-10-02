@@ -26,12 +26,10 @@ test:
     imulq %rsi, %rax -> (val(x) = val(x) * y)
     movq %rdi, %rdx -> (t = x)
     orq  %rsi, %rdx -> (t = x or y -> x>=y)
-    cmpq  %rsi, %rax -> (x/y)
+    cmpq  %rsi, %rax -> (x:y)
     cmovge %rdx, %rax -> (val = t)
     ret
 .L2:
     idivq %rsi, %rdi -> (x = x/y)
     cmpq $10, %rsi -> (y:10)
     cmovge %rdi, %rax (val = x/y)
-
-

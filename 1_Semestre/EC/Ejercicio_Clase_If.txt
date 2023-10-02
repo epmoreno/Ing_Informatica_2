@@ -1,0 +1,37 @@
+short test(short x, short y){
+    short val = y+12; 
+    if(x<0){
+        if(x < y){
+            val = x*y;
+        }else{
+            val = x|y;
+        }
+    }else{
+        if (y >= 10){
+            val = x/y;
+        }
+    } 
+    return val;
+}
+
+x -> %rdi;
+y -> %rsi;
+
+test:
+    leaq 12(%rsi), %rax -> (val = y+12);
+    testq %rdi, %rdi -> (compara respecto a >= cero, por lo tanto poner de forma inversa -> x<0 )
+    jge .L2 -> (Salto si x>=0)
+    ///////Resoluciones\\\\\\\
+    movq %rdi, %rax -> (val = x)
+    imulq %rsi, %rax -> (val(x) = val(x) * y)
+    movq %rdi, %rdx -> (t = x)
+    orq  %rsi, %rdx -> (t = x or y -> x>=y)
+    cmpq  %rsi, %rax -> (x/y)
+    cmovge %rdx, %rax -> (val = t)
+    ret
+.L2:
+    idivq %rsi, %rdi -> (x = x/y)
+    cmpq $10, %rsi -> (y:10)
+    cmovge %rdi, %rax (val = x/y)
+
+

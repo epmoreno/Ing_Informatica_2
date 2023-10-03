@@ -1,66 +1,173 @@
 
 
 *******************************************************************************
-Tue Oct 03 18:39:40 2023
+Tue Oct 03 20:20:02 2023
 
 
 FIT:    data read from 'resultados.dat'
         format = z
-        #datapoints = 12
+        #datapoints = 247
         residuals are weighted equally (unit weight)
 
 function used for fitting: f(x)
-	f(x)=a*x+b
-fitted parameters initialized with current variable values
-
-iter      chisq       delta/lim  lambda   a             b            
-   0 4.2584511343e+09   0.00e+00  1.59e+00    1.000000e+00   1.000000e+00
-   3 2.4764004791e+08  -1.70e-02  1.59e-03    7.470572e+03   5.578210e+03
-
-After 3 iterations the fit converged.
-final sum of squares of residuals : 2.4764e+08
-rel. change during last iteration : -1.6985e-07
-
-degrees of freedom    (FIT_NDF)                        : 10
-rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4976.34
-variance of residuals (reduced chisquare) = WSSR/ndf   : 2.4764e+07
-
-Final set of parameters            Asymptotic Standard Error
-=======================            ==========================
-a               = 7470.57          +/- 794.1        (10.63%)
-b               = 5578.21          +/- 1605         (28.78%)
-
-correlation matrix of the fit parameters:
-                a      b      
-a               1.000 
-b              -0.446  1.000 
-
-
-*******************************************************************************
-Tue Oct 03 18:44:32 2023
-
-
-FIT:    data read from 'resultados.dat'
-        format = z
-        #datapoints = 12
-        residuals are weighted equally (unit weight)
-
-function used for fitting: f(x)
-	f(x) = ax²+bx+c
+	f(x) =  ax^2+bx+c
 fitted parameters initialized with current variable values
 
 
 
 *******************************************************************************
-Tue Oct 03 18:47:19 2023
+Tue Oct 03 20:20:06 2023
 
 
 FIT:    data read from 'resultados.dat'
         format = z
-        #datapoints = 12
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) =  ax^2+bx+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 20:20:48 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
         residuals are weighted equally (unit weight)
 
 function used for fitting: f(x)
 	f(x) = ax^2+bx+c
 fitted parameters initialized with current variable values
 
+
+
+*******************************************************************************
+Tue Oct 03 20:22:37 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x^2+b*x+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 20:22:40 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x^2+b*x+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 20:23:28 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x^2+b*x+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 20:24:14 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = (a*x)^2+(b*x)+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 20:25:08 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = (a*x)^2+(b*x)+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 20:38:15 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = (a*x)^2+(b*x)+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 20:39:35 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 247
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = (a*x)**2+(b*x)+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.8575647894e+19   0.00e+00  3.17e+08    1.000000e+00   1.000000e+00   1.000000e+00
+  18 6.5352746526e+00  -1.23e-05  3.17e-10    5.849454e-05   5.444123e-06  -4.868398e-03
+
+After 18 iterations the fit converged.
+final sum of squares of residuals : 6.53527
+rel. change during last iteration : -1.23217e-10
+
+degrees of freedom    (FIT_NDF)                        : 244
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.163658
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0267839
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 5.84945e-05      +/- 1.957e-06    (3.345%)
+b               = 5.44412e-06      +/- 5.864e-06    (107.7%)
+c               = -0.0048684       +/- 0.03149      (646.9%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.968  1.000 
+c               0.748 -0.868  1.000 

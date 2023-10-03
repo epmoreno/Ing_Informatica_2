@@ -1,17 +1,12 @@
-# Definir el nombre del archivo de salida
+#!/bin/csh
+@ inicio = 100
+@ fin = 1000000
+@ incremento = 100
+@ i = $inicio
 set output_file = "resultados.dat"
-
-# Borrar el archivo de salida si ya existe
-#if (-e $output_file) then
-#    rm $output_file
-#endif
-
-# Definir cuántas veces se ejecutará el programa
-@ iterations = 1
-
-# Ejecutar el programa varias veces
-while ($iterations > 0)
-    # Ejecutar el programa y redirigir la salida al archivo
-    ./ordenacion.exe >>& $output_file
-    @ iterations--
+#echo > resultados.dat
+while ( $i <= $fin )
+ echo Ejecución tam = $i
+ ./ordenacion.exe $i 10000 >>& $output_file
+ @ i += $incremento
 end

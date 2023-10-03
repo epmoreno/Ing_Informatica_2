@@ -5,11 +5,11 @@
 using namespace std;
 
 int operacion(int *v, int n, int x, int inf, int sup) {
-  int med;
+  int med; //media
   bool enc=false;
-  while ((inf<sup) && (!enc)) {
-    med = (inf+sup)/2; 
-    if (v[med]==x) 
+  while ((inf<sup) && (!enc)) { //mientras inf sea < sup && enc no sea false
+    med = (inf+sup)/2; //hacemos la media de ambos
+    if (v[med]==x) //si la posicion de 
       enc = true;
     else if (v[med] < x) 
       inf = med+1;

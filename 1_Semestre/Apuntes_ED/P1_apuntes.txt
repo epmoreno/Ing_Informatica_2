@@ -22,3 +22,25 @@ tfin=clock;
 cout << "Ticks de reloj : " << tfin-tini << endl; / fin - inicio
 cout << "Segundos : " << (tfin-tini)/(double)CLOCKS_PER_SEC << endl; / Conversion a Segundos
 
+
+/--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+
+
+Este código está verificando los argumentos de la línea de comandos pasados al programa y convirtiendo uno de ellos a un entero.
+
+Aquí está el desglose:
+
+if (argc!=2) sintaxis();: argc es una variable que contiene el número de argumentos de la línea de comandos pasados al programa. 
+El nombre argc significa "conteo de argumentos". Si argc no es igual a 2, el programa llama a la función sintaxis(). 
+Esta es probablemente una función que muestra un mensaje sobre la sintaxis correcta o el uso del programa.
+
+int tam=atoi(argv[1]);: argv es un array que contiene los argumentos de la línea de comandos.
+El nombre argv significa "vector de argumentos". argv[0] es el nombre del programa en sí, argv[1] es el primer argumento pasado al programa, y así sucesivamente. 
+Aquí, argv[1] se está convirtiendo de una cadena a un entero usando la función atoi(), y el resultado se está almacenando en la variable tam.
+
+if (tam<=0) sintaxis();: Esta línea verifica si tam es menor o igual a 0. 
+Si es así, el programa llama a la función sintaxis().
+Esto probablemente está comprobando que el argumento de la línea de comandos es un entero positivo, y si no lo es, el programa muestra un mensaje sobre el uso correcto.
+
+Por lo tanto, en general, este código está comprobando que se ha pasado el número correcto de argumentos al programa y que el primer argumento es un entero positivo. 
+Si no se cumple alguna de estas condiciones, llama a una función para mostrar un mensaje de uso.

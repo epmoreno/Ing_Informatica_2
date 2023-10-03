@@ -1,0 +1,66 @@
+
+
+*******************************************************************************
+Tue Oct 03 18:39:40 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 4.2584511343e+09   0.00e+00  1.59e+00    1.000000e+00   1.000000e+00
+   3 2.4764004791e+08  -1.70e-02  1.59e-03    7.470572e+03   5.578210e+03
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 2.4764e+08
+rel. change during last iteration : -1.6985e-07
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4976.34
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.4764e+07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 7470.57          +/- 794.1        (10.63%)
+b               = 5578.21          +/- 1605         (28.78%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.446  1.000 
+
+
+*******************************************************************************
+Tue Oct 03 18:44:32 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = ax²+bx+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Oct 03 18:47:19 2023
+
+
+FIT:    data read from 'resultados.dat'
+        format = z
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = ax^2+bx+c
+fitted parameters initialized with current variable values
+

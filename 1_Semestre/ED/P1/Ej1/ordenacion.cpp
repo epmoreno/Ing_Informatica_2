@@ -17,7 +17,7 @@ void ordenar(int *v, int n) {
 int main()
 {   
     //GENERADOR DE VECTOR ALEATORIO
-    int tam = 30000;
+    int tam = 15000;
     int *v=new int[tam];
     srand(time(0)); //inicialización generador numeros pseudoaleatorios
     for (int i = 0; i < tam; i++){
@@ -35,10 +35,8 @@ int main()
     clock_t tfin ;//tiempo de finalizacion
     tfin=clock();
     
-    cout<<endl;
-    cout<<"Tamaño = "<<tam<<", tiempo de ejecución en seg = "<<(tfin-tini)/(double)CLOCKS_PER_SEC<<endl;
-    cout<<endl;
-    
+    cout<<(tfin-tini)/(double)CLOCKS_PER_SEC<<" "<<tam<<endl;
+
     // Liberar la memoria asignada al array
     delete[] v;
     return 0;

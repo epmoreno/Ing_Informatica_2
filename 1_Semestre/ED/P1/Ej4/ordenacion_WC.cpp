@@ -1,6 +1,9 @@
 #include <iostream>
 #include <ctime> // Recursos para medir tiempos
 #include <cstdlib> // Para generación de números pseudoaleatorios
+#include <chrono>
+#include <iomanip>
+
 using namespace std;
 int buscar(const int *v, int n, int x) {
     int i=0;
@@ -14,17 +17,17 @@ int buscar(const int *v, int n, int x) {
 void ordenar(int *v, int n) {
     for (int i=0; i<n-1; i++)
         for (int j=0; j<n-i-1; j++)
-            if (v[j]>v[j+1]) {
+            if (v[j]<v[j+1]) {
                 int aux = v[j];
                 v[j] = v[j+1];
                 v[j+1] = aux;
             }
 }
 void sintaxis() {
- cerr << "Sintaxis:" << endl;
- cerr << " TAM: Tamaño del vector (>0)" << endl;
- cerr << " VMAX: Valor máximo (>0)" << endl;
- cerr << "Genera un vector de TAM números aleatorios en [0,VMAX[" << endl;
+    cerr << "Sintaxis:" << endl;
+    cerr << " TAM: Tamaño del vector (>0)" << endl;
+    cerr << " VMAX: Valor máximo (>0)" << endl;
+    cerr << "Genera un vector de TAM números aleatorios en [0,VMAX[" << endl;
  exit(EXIT_FAILURE);
 }
 int main(int argc, char * argv[]) {
@@ -41,18 +44,22 @@ int main(int argc, char * argv[]) {
     for (int i=0; i<tam; i++) // Recorrer vector
         v[i] = rand() % vmax; // Generar aleatorio [0,vmax[
 
+    ordenar(v, tam);//ORDENAMOS PREVIAMENTE
 
-    clock_t tini; // Anotamos el tiempo de inicio
-    tini=clock();
+    auto start = std::chrono::high_resolution_clock::now();
 
-    int x = vmax; // Buscamos un valor que no está en el vector
-    buscar(v,tam,x); // de esta forma forzamos el peor caso    
-    ordenar(v, tam);//ORDENAMO
+    buscar(v,tam,vmax);
 
-    clock_t tfin; // Anotamos el tiempo de finalización
-    tfin=clock();
-    // Mostramos resultados (Tamaño del vector y tiempo de ejecución en seg.)
-    cout << tam << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;
+    auto stop = std::chrono::high_resolution_clock::now();
 
+    //Microsegundos
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+    //Mayor nº demimales
+    cout << fixed << setprecision(100);
+
+    // Mostramos resultados y convertimos e milisegundos a segindos /1000000.0
+    cout <<  tam << "\t" << duration.count()/ 1000000.0 << endl;
+    
     delete [] v; // Liberamos memoria dinámica
 }

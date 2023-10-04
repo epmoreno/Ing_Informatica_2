@@ -41,12 +41,13 @@ int main(int argc, char * argv[]) {
     for (int i=0; i<tam; i++) // Recorrer vector
         v[i] = rand() % vmax; // Generar aleatorio [0,vmax[
 
+
     clock_t tini; // Anotamos el tiempo de inicio
     tini=clock();
 
-    int x = vmax+1; // Buscamos un valor que no está en el vector
-    buscar(v,tam,x); // de esta forma forzamos el peor caso
-    ordenar(v, tam);//ORDENAMOS    
+    int x = vmax; // Buscamos un valor que no está en el vector
+    buscar(v,tam,x); // de esta forma forzamos el peor caso    
+    ordenar(v, tam);//ORDENAMO
 
     clock_t tfin; // Anotamos el tiempo de finalización
     tfin=clock();

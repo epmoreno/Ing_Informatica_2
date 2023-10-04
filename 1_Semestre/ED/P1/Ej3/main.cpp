@@ -1,10 +1,20 @@
 #include <iostream>
 #include <ctime>    // Recursos para medir tiempos
 #include <cstdlib>  // Para generación de números pseudoaleatorios
+#include <chrono>
+#include <iomanip>
 
 using namespace std;
 
 int operacion(int *v, int n, int x, int inf, int sup) {
+//Verificacion
+  if (x<v[0] || x>v[n-1])
+  {
+    cout << " ";
+    return -1;
+  }
+  
+
   int med; //media
   bool enc=false;
   while ((inf<sup) && (!enc)) { //mientras inf sea < sup && enc no sea false
@@ -45,17 +55,23 @@ int main(int argc, char * argv[])
   for (int i=0; i<tam; i++)  // Recorrer vector
     v[i] = rand() % tam;
   
-  clock_t tini;    // Anotamos el tiempo de inicio
-  tini=clock();
+  //Inicio
+  auto start = std::chrono::high_resolution_clock::now();
 
-  // Algoritmo a evaluar
+    // Algoritmo a evaluar
   operacion(v,tam,tam+1,0,tam-1);
   
-  clock_t tfin;    // Anotamos el tiempo de finalización
-  tfin=clock();
+  //Fin
+  auto stop = std::chrono::high_resolution_clock::now();
 
-  // Mostramos resultados
-  cout << tam << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;
+  //Microsegundos
+  auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+  //Mayor nº demimales
+  cout << fixed << setprecision(100);
+
+  // Mostramos resultados y convertimos e milisegundos a segindos /1000000.0
+  cout <<  tam << "\t" << duration.count()/ 1000000.0 << endl;
   
   delete [] v;     // Liberamos memoria dinámica
 }

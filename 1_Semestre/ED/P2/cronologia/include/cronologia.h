@@ -8,7 +8,8 @@
     private:
         std::vector<FechaHistorica> fechasHistoricas; //Vector de fechashistoricas
     public:
-        void addFechaHistorica(const FechaHistorica& fechaHistorica);   //toma como referencia la clase FH para mas tarde introducirlo en el vector de arriba
+        void addFechaHistorica(const FechaHistorica& fechaHistorica);//toma como referencia la clase FH para mas tarde introducirlo en el vector de arriba
+        void BuscarEventoHistorico(int año_E);//buscaremos los eventos por fecha   
         std::string toString() const; //Convertidor a cadena
         auto begin() { return fechasHistoricas.begin(); }
         auto end() { return fechasHistoricas.end(); }

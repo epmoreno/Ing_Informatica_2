@@ -2,11 +2,11 @@
 
 FechaHistorica::FechaHistorica(int año, const std::vector<std::string> eventos) : año(año), eventos(eventos) {} //inicializacion de constructor
 
-int FechaHistorica::getAño() const{ //return año
+int FechaHistorica::getAño() const{ //devuelve año
     return año;
 }
 
-const std::vector<std::string>& FechaHistorica::getEventos() const{ //return eventos
+const std::vector<std::string>& FechaHistorica::getEventos() const{ //devuelve eventos
     return eventos;
 }
 

@@ -9,7 +9,7 @@ int main() {
     FechaHistorica evento1(1903, {"A Fast Fourier Transform algorithm presented by Carle David Tolmé Runge"});
     FechaHistorica evento2(1969, {"Alunizaje del Apolo 11"});
     FechaHistorica evento3(1991, {"Disolución de la Unión Soviética"});
-    FechaHistorica evento4(1936,{"Turing machine, an abstract machine developed by Alan Turing","with others developed the modern notion of algorithm"});
+    FechaHistorica evento4(1936, {"Turing machine","an abstract machine developed by Alan Turing","with others developed the modern notion of algorithm"});
 
     /*Introducimos Eventos en Cronologia*/
     cronologia.addFechaHistorica(evento1);
@@ -18,10 +18,15 @@ int main() {
     cronologia.addFechaHistorica(evento4);
 
     /*Ordenamos por año los eventos e Imprimimos*/
-    std::sort(cronologia.begin(), cronologia.end(), [](const FechaHistorica& a, const FechaHistorica& b) {
-        return a.getAño() < b.getAño(); 
-    }); 
+    std::sort(cronologia.begin(), cronologia.end(), [](const FechaHistorica& a, const FechaHistorica& b) { // funcion sort() la utilizamos para recorrer el vector fechashistoricas, iniciando previamente begin() y end() en cronologia.h,
+        return a.getAño() < b.getAño(); //organizandolo segun su fecha
+    });
+
+    /*Mostramos los eventos ya ordenados de mayor a menos en base al año*/
     std::cout << cronologia.toString() << std::endl;
+
+    /*Buscamos un evento por fecha*/
+    cronologia.BuscarEventoHistorico(1991);
 
     return 0;
 }

@@ -23,20 +23,18 @@ int main() {
     });
 
     /*Mostramos los eventos ya ordenados de mayor a menos en base al año*/
-    std::cout << cronologia.toString() << std::endl;
+    std::cout << "--Eventos--" << std::endl;
+        /*Aplicamos la funcion toString() de la clase cronologia en la cual hemos almacenado los datos de fechasHistoricas 
+        y nos mostrara estas convertiudas ya en cadena*/
+    std::cout << cronologia.toString() << std::endl;// 
 
     /*Buscamos un evento por fecha*/
     cronologia.BuscarEventoHistorico(1991);
+    
+    std::cout << "\n" ;
+
+    /*Buscamos una fecha por el evento sucedido en ella*/
+    cronologia.BuscarAñoHistorico("Turing machine");
 
     return 0;
 }
-
-/**
- **DIARIO:
- * 
- * Asociar los archivos y que estos creen las fechas junto con los eventos
- * Vector en fechashistoricas que almacena los eventos que introducimos a mano
- * Vector en Cronologia que almacena dichos eventos junto con sus fechas
- * Utilizacion de la funcion sort() junto con sus metodos .begin y .end para ordenar gracias a #include<vector>
- * !Queda por reorganizare el codigo para que me de los eventos segun su fecha y su fecha segun el evento.
-*/

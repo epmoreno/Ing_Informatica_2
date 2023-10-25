@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cronologia y Fechas Historicas: Fichero Fuente /home/enriquepm/Documentos/GitHub/Ing_Informatica_2/1_Semestre/ED/P2/cronologia/src/cronologia.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cronologia y Fechas Historicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">cronologia.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cronologia_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../include/cronologia.h&quot;</span> <span class="comment">//incluimos el archivo necesario</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classCronologia.html#a457ee5c23836720996457617a96311c5">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCronologia.html#a457ee5c23836720996457617a96311c5">Cronologia::addFechaHistorica</a>(<span class="keyword">const</span> <a class="code" href="classFechaHistorica.html">FechaHistorica</a>&amp; fechaHistorica){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classCronologia.html#a838c1b0c9910667ca982ae538fe2e34c">fechasHistoricas</a>.push_back(fechaHistorica); <span class="comment">//Metemos en fechashistoricas fechahistorica</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classCronologia.html#a3b4f3b81fa9eb87cc7754528570dff6d">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCronologia.html#a3b4f3b81fa9eb87cc7754528570dff6d">Cronologia::BuscarEventoHistorico</a>(<span class="keywordtype">int</span> año_E){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; fechaHistorica : <a class="code" href="classCronologia.html#a838c1b0c9910667ca982ae538fe2e34c">fechasHistoricas</a>){<span class="comment">// Recorremos cada fechaHistorica dento del vector de fechasHistoricas</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (fechaHistorica.getAño() == año_E){ <span class="comment">// Si el año es igual al año de la fechaHistorica</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; eventos = fechaHistorica.getEventos(); <span class="comment">//Almacenamos los eventos de la fechaHistorica</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            std::cout&lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; año_E &lt;&lt; <span class="stringliteral">&quot;-- \n&quot;</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; evento : eventos){ <span class="comment">// Recorremos cada evento de la fechaHistorica y lo reproducimos en pantalla</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                std::cout &lt;&lt; evento &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        } </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::cout&lt;&lt;<span class="stringliteral">&quot;No se ha encontrado el año.\n&quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classCronologia.html#acd16431c156417a5d8c88211cbe75d02">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCronologia.html#acd16431c156417a5d8c88211cbe75d02">Cronologia::BuscarAñoHistorico</a>(<span class="keyword">const</span> std::string&amp; nombreEvento){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; fechaHistorica : <a class="code" href="classCronologia.html#a838c1b0c9910667ca982ae538fe2e34c">fechasHistoricas</a>){<span class="comment">// Recorremos cada fechaHistorica dento del vector fechasHistoricas</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; eventos = fechaHistorica.getEventos(); <span class="comment">//almacenamos los eventos de la fechaHistorica</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; evento : eventos){ <span class="comment">// Recorremos cada evento de la fechaHistorica</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span>(evento == nombreEvento){ <span class="comment">// si el evento es igual al nombre del evento</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; año = fechaHistorica.getAño(); <span class="comment">//Almacenamos</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                std::cout&lt;&lt;<span class="stringliteral">&quot;--&quot;</span> &lt;&lt; año &lt;&lt; <span class="stringliteral">&quot;-- \n&quot;</span>; <span class="comment">//Mostramos el año junto con el nombre del evento</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                std::cout&lt;&lt; nombreEvento &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span>; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::cout&lt;&lt;<span class="stringliteral">&quot;No se ha encontrado el evento.\n&quot;</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classCronologia.html#af7014e5d781cd3f5f375089beb000226">   92</a></span>&#160;std::string <a class="code" href="classCronologia.html#af7014e5d781cd3f5f375089beb000226">Cronologia::toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string resultado; <span class="comment">//variable resultado</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; fechaHistorica : <a class="code" href="classCronologia.html#a838c1b0c9910667ca982ae538fe2e34c">fechasHistoricas</a>){ <span class="comment">//recorre cada fechahistorica en el vector fechashistoricas</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        resultado += fechaHistorica.toString() + <span class="stringliteral">&quot;\n&quot;</span>; <span class="comment">// llamamos al metodo toString de cada fechaHistorica, convertimos en cadenas las fechasHistoricas</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> resultado; <span class="comment">//devuelve fechashistoricas</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="aclassCronologia_html_a3b4f3b81fa9eb87cc7754528570dff6d"><div class="ttname"><a href="classCronologia.html#a3b4f3b81fa9eb87cc7754528570dff6d">Cronologia::BuscarEventoHistorico</a></div><div class="ttdeci">void BuscarEventoHistorico(int año_E)</div><div class="ttdoc">Busca un evento histórico en la cronología por año.</div><div class="ttdef"><b>Definition:</b> <a href="cronologia_8cpp_source.html#l00033">cronologia.cpp:33</a></div></div>
+<div class="ttc" id="aclassCronologia_html_a457ee5c23836720996457617a96311c5"><div class="ttname"><a href="classCronologia.html#a457ee5c23836720996457617a96311c5">Cronologia::addFechaHistorica</a></div><div class="ttdeci">void addFechaHistorica(const FechaHistorica &amp;fechaHistorica)</div><div class="ttdoc">Añade una fecha histórica a la cronología.</div><div class="ttdef"><b>Definition:</b> <a href="cronologia_8cpp_source.html#l00015">cronologia.cpp:15</a></div></div>
+<div class="ttc" id="aclassCronologia_html_a838c1b0c9910667ca982ae538fe2e34c"><div class="ttname"><a href="classCronologia.html#a838c1b0c9910667ca982ae538fe2e34c">Cronologia::fechasHistoricas</a></div><div class="ttdeci">std::vector&lt; FechaHistorica &gt; fechasHistoricas</div><div class="ttdoc">Vector de fechas históricas.</div><div class="ttdef"><b>Definition:</b> <a href="cronologia_8h_source.html#l00026">cronologia.h:26</a></div></div>
+<div class="ttc" id="aclassCronologia_html_acd16431c156417a5d8c88211cbe75d02"><div class="ttname"><a href="classCronologia.html#acd16431c156417a5d8c88211cbe75d02">Cronologia::BuscarAñoHistorico</a></div><div class="ttdeci">void BuscarAñoHistorico(const std::string &amp;nombreEvento)</div><div class="ttdoc">Busca una fecha histórica en la cronología por evento sucedido en dicha fecha.</div><div class="ttdef"><b>Definition:</b> <a href="cronologia_8cpp_source.html#l00061">cronologia.cpp:61</a></div></div>
+<div class="ttc" id="aclassCronologia_html_af7014e5d781cd3f5f375089beb000226"><div class="ttname"><a href="classCronologia.html#af7014e5d781cd3f5f375089beb000226">Cronologia::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Convierte la cronología a una cadena de texto.</div><div class="ttdef"><b>Definition:</b> <a href="cronologia_8cpp_source.html#l00092">cronologia.cpp:92</a></div></div>
+<div class="ttc" id="aclassFechaHistorica_html"><div class="ttname"><a href="classFechaHistorica.html">FechaHistorica</a></div><div class="ttdoc">Representa una fecha en la historia.</div><div class="ttdef"><b>Definition:</b> <a href="fechahistorica_8h_source.html#l00022">fechahistorica.h:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

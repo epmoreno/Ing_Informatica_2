@@ -1,37 +1,72 @@
-\hypertarget{classCronologia}{}\doxysection{Cronologia Class Reference}
+\hypertarget{classCronologia}{}\doxysection{Referencia de la Clase Cronologia}
 \label{classCronologia}\index{Cronologia@{Cronologia}}
+
+
+Representa una colección de fechas históricas.  
+
+
 
 
 {\ttfamily \#include $<$cronologia.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classCronologia_a457ee5c23836720996457617a96311c5}{add\+Fecha\+Historica}} (const \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}} \&fecha\+Historica)
-\item 
+\begin{DoxyCompactList}\small\item\em Añade una fecha histórica a la cronología. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCronologia_a3b4f3b81fa9eb87cc7754528570dff6d}{Buscar\+Evento\+Historico}} (int año\+\_\+E)
-\item 
+\begin{DoxyCompactList}\small\item\em Busca un evento histórico en la cronología por año. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCronologia_acd16431c156417a5d8c88211cbe75d02}{Buscar\+Año\+Historico}} (const std\+::string \&nombre\+Evento)
-\item 
+\begin{DoxyCompactList}\small\item\em Busca una fecha histórica en la cronología por evento sucedido en dicha fecha. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classCronologia_af7014e5d781cd3f5f375089beb000226}{to\+String}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Convierte la cronología a una cadena de texto. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{classCronologia_ae1730a9834023fa37d2cb4fd22d3a1d4}{begin}} ()
 \item 
 auto \mbox{\hyperlink{classCronologia_a570bcdc2c6bcea3cc00e74f28f3dfd07}{end}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+\doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}} $>$ \mbox{\hyperlink{classCronologia_a838c1b0c9910667ca982ae538fe2e34c}{fechas\+Historicas}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Vector de fechas históricas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Descripción detallada}
+Representa una colección de fechas históricas. 
+
+La clase \mbox{\hyperlink{classCronologia}{Cronologia}} permite almacenar, buscar y manipular un conjunto de fechas históricas. Cada fecha histórica es un objeto de la clase \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}}, que contiene un año y una lista de eventos que ocurrieron en ese año. La cronología almacena las fechas históricas en un vector. 
+
+Definición en la línea 23 del archivo cronologia.\+h.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
 \mbox{\Hypertarget{classCronologia_a457ee5c23836720996457617a96311c5}\label{classCronologia_a457ee5c23836720996457617a96311c5}} 
 \index{Cronologia@{Cronologia}!addFechaHistorica@{addFechaHistorica}}
 \index{addFechaHistorica@{addFechaHistorica}!Cronologia@{Cronologia}}
 \doxysubsubsection{\texorpdfstring{addFechaHistorica()}{addFechaHistorica()}}
 {\footnotesize\ttfamily void Cronologia\+::add\+Fecha\+Historica (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}} \&}]{fecha\+Historica }\end{DoxyParamCaption})}
+
+
+
+Añade una fecha histórica a la cronología. 
+
+Esta función toma una fecha histórica y la añade al final del vector de fechas históricas.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fecha\+Historica} & La fecha histórica a añadir. Es una constante que hace referencia a un objeto de la clase \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada.
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+Esta función modifica el objeto cronología añadiendo una nueva fecha histórica. 
+\end{DoxyNote}
+
+
+Definición en la línea 15 del archivo cronologia.\+cpp.
 
 \mbox{\Hypertarget{classCronologia_ae1730a9834023fa37d2cb4fd22d3a1d4}\label{classCronologia_ae1730a9834023fa37d2cb4fd22d3a1d4}} 
 \index{Cronologia@{Cronologia}!begin@{begin}}
@@ -39,11 +74,39 @@ std\+::vector$<$ \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}} $>$ \m
 \doxysubsubsection{\texorpdfstring{begin()}{begin()}}
 {\footnotesize\ttfamily auto Cronologia\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Definición en la línea 41 del archivo cronologia.\+h.
+
 \mbox{\Hypertarget{classCronologia_acd16431c156417a5d8c88211cbe75d02}\label{classCronologia_acd16431c156417a5d8c88211cbe75d02}} 
 \index{Cronologia@{Cronologia}!BuscarAñoHistorico@{BuscarAñoHistorico}}
 \index{BuscarAñoHistorico@{BuscarAñoHistorico}!Cronologia@{Cronologia}}
 \doxysubsubsection{\texorpdfstring{BuscarAñoHistorico()}{BuscarAñoHistorico()}}
 {\footnotesize\ttfamily void Cronologia\+::\+Buscar\+Año\+Historico (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nombre\+Evento }\end{DoxyParamCaption})}
+
+
+
+Busca una fecha histórica en la cronología por evento sucedido en dicha fecha. 
+
+Recorre cada fecha histórica dentro del vector de fechas históricas. Si el evento de la fecha histórica es igual al evento proporcionado, almacena el año de la fecha histórica y los imprime en pantalla.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\+Evento} & Evento del evento a buscar. Es un string que representa el evento del año histórico que se quiere buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada, pero imprime en pantalla el año y el evento correspondiente si se encuentra una fecha histórica con el evento proporcionado.
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+Esta función no modifica el objeto cronología.
+\end{DoxyNote}
+\begin{DoxyWarning}{Atención}
+Si no se encuentra ninguna fecha histórica con el evento proporcionado, se imprime \char`\"{}\+No se ha encontrado el evento.\char`\"{}. 
+\end{DoxyWarning}
+
+
+Definición en la línea 61 del archivo cronologia.\+cpp.
 
 \mbox{\Hypertarget{classCronologia_a3b4f3b81fa9eb87cc7754528570dff6d}\label{classCronologia_a3b4f3b81fa9eb87cc7754528570dff6d}} 
 \index{Cronologia@{Cronologia}!BuscarEventoHistorico@{BuscarEventoHistorico}}
@@ -51,11 +114,39 @@ std\+::vector$<$ \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}} $>$ \m
 \doxysubsubsection{\texorpdfstring{BuscarEventoHistorico()}{BuscarEventoHistorico()}}
 {\footnotesize\ttfamily void Cronologia\+::\+Buscar\+Evento\+Historico (\begin{DoxyParamCaption}\item[{int}]{año\+\_\+E }\end{DoxyParamCaption})}
 
+
+
+Busca un evento histórico en la cronología por año. 
+
+Recorre cada fecha histórica dentro del vector de fechas históricas. Si el año de la fecha histórica es igual al año proporcionado, almacena los eventos de la fecha histórica y los imprime en pantalla.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em año\+\_\+E} & Año del evento a buscar. Es un entero que representa el año del evento histórico que se quiere buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada, pero imprime en pantalla el año y los eventos correspondientes si se encuentra una fecha histórica con el año proporcionado.
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+Esta función no modifica el objeto cronología.
+\end{DoxyNote}
+\begin{DoxyWarning}{Atención}
+Si no se encuentra ninguna fecha histórica con el año proporcionado, se imprime \char`\"{}\+No se ha encontrado el año.\char`\"{}. 
+\end{DoxyWarning}
+
+
+Definición en la línea 33 del archivo cronologia.\+cpp.
+
 \mbox{\Hypertarget{classCronologia_a570bcdc2c6bcea3cc00e74f28f3dfd07}\label{classCronologia_a570bcdc2c6bcea3cc00e74f28f3dfd07}} 
 \index{Cronologia@{Cronologia}!end@{end}}
 \index{end@{end}!Cronologia@{Cronologia}}
 \doxysubsubsection{\texorpdfstring{end()}{end()}}
 {\footnotesize\ttfamily auto Cronologia\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea 44 del archivo cronologia.\+h.
 
 \mbox{\Hypertarget{classCronologia_af7014e5d781cd3f5f375089beb000226}\label{classCronologia_af7014e5d781cd3f5f375089beb000226}} 
 \index{Cronologia@{Cronologia}!toString@{toString}}
@@ -65,7 +156,27 @@ std\+::vector$<$ \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}} $>$ \m
 
 
 
-\doxysubsection{Member Data Documentation}
+Convierte la cronología a una cadena de texto. 
+
+Esta función es responsable de convertir una cronología completa a una representación de cadena de texto. La cadena de texto resultante tiene el formato \char`\"{}\+Fecha\+Historica1\textbackslash{}n\+Fecha\+Historica2\textbackslash{}n...\char`\"{}.(Siendo \textquotesingle{}~\newline
+\textquotesingle{} un salto de línea).
+
+Primero, la función inicializa una cadena de texto vacía llamada {\ttfamily resultado}. Luego, la función recorre cada fecha histórica en el vector de fechas históricas. Para cada fecha histórica, la función convierte la fecha histórica a una cadena de texto llamando a la función {\ttfamily to\+String} de la fecha histórica. Luego, añade la cadena de texto de la fecha histórica a {\ttfamily resultado}, seguida de un carácter de nueva línea. Después de recorrer todas las fechas históricas, la función devuelve {\ttfamily resultado}.
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve una cadena de texto que representa la cronología. ~\newline
+
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+Esta función no modifica el objeto \mbox{\hyperlink{classCronologia}{Cronologia}}. Solo accede a los datos del objeto y los utiliza para crear una nueva cadena de texto. 
+\end{DoxyNote}
+
+
+Definición en la línea 92 del archivo cronologia.\+cpp.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
 \mbox{\Hypertarget{classCronologia_a838c1b0c9910667ca982ae538fe2e34c}\label{classCronologia_a838c1b0c9910667ca982ae538fe2e34c}} 
 \index{Cronologia@{Cronologia}!fechasHistoricas@{fechasHistoricas}}
 \index{fechasHistoricas@{fechasHistoricas}!Cronologia@{Cronologia}}
@@ -74,7 +185,15 @@ std\+::vector$<$ \mbox{\hyperlink{classFechaHistorica}{Fecha\+Historica}} $>$ \m
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+Vector de fechas históricas. 
+
+
+
+Definición en la línea 26 del archivo cronologia.\+h.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
 \item 
 /home/enriquepm/\+Documentos/\+Git\+Hub/\+Ing\+\_\+\+Informatica\+\_\+2/1\+\_\+\+Semestre/\+ED/\+P2/cronologia/include/\mbox{\hyperlink{cronologia_8h}{cronologia.\+h}}\item 
 /home/enriquepm/\+Documentos/\+Git\+Hub/\+Ing\+\_\+\+Informatica\+\_\+2/1\+\_\+\+Semestre/\+ED/\+P2/cronologia/src/\mbox{\hyperlink{cronologia_8cpp}{cronologia.\+cpp}}\end{DoxyCompactItemize}

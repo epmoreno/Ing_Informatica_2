@@ -33,9 +33,6 @@ class FechaHistorica{
         
         const std::vector<std::string>& getEventos() const; 
 
-        
-        void addEvento(const std::string& evento);
-
        
         std::string toString() const; 
 };

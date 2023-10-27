@@ -1,0 +1,47 @@
+\chapter{T.\+D.\+A. y Documentación del software}
+\hypertarget{index}{}\label{index}\index{T.D.A. y Documentación del software@{T.D.A. y Documentación del software}}
+\label{index_md__2home_2enriquepm_2Documentos_2GitHub_2Ing__Informatica__2_21__Semestre_2ED_2P2_2cronologia_2Readme}%
+\Hypertarget{index_md__2home_2enriquepm_2Documentos_2GitHub_2Ing__Informatica__2_21__Semestre_2ED_2P2_2cronologia_2Readme}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Objetivos}{Objetivos}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Asimilar los conceptos fundamentales de abstracción, aplicado al desarrollo de programas.
+\item Documentar un tipo de dato abstracto (T.\+D.\+A).
+\item Practicar con el uso de doxygen.
+\item Profundizar en los conceptos relacionados especifcación del T.\+D.\+A, representación del T.\+D.\+A., función de Abstracción e Invariante de la representación.
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Ejercicio}{Ejercicio}}\label{index_autotoc_md2}
+Con la fnalidad de mejorar nuestros conocimientos sobre Historia, queremos desarrollar una aplicación que nos permita obtener acontecimientos históricos sucedidos en una fecha y viceversa, averiguar el año en el que sucedió algún acontecimiento.
+
+
+\begin{DoxyItemize}
+\item Dato Abstratcos a desarrollar (T.\+D.\+A)\+:
+\begin{DoxyItemize}
+\item Fecha\+Histórica\+: Se compone de una fecha y uno o más eventos sucedidos en dicha fecha.
+\item Cronología\+: Es un conjunto de fechas históricas ordenadas por año.
+\end{DoxyItemize}
+\item Módulos a desarrollar \+:
+\begin{DoxyItemize}
+\item \textquotesingle{}\doxylink{fechahistorica_8cpp}{fechahistorica.\+cpp}\textquotesingle{} y \textquotesingle{}\doxylink{fechahistorica_8h}{fechahistorica.\+h}\textquotesingle{}.
+\begin{DoxyItemize}
+\item Constructor de la clase.
+\item Metodos get Año y Evento.
+\item Función to\+String() que une y convierte a cadena los datos.
+\end{DoxyItemize}
+\item \textquotesingle{}\doxylink{cronologia_8cpp}{cronologia.\+cpp}\textquotesingle{} y \textquotesingle{}\doxylink{cronologia_8h}{cronologia.\+h}\textquotesingle{}.
+\begin{DoxyItemize}
+\item Vector contenedor de las fechas creadas.
+\item Función para añadir evento add\+Fecha\+Historica().
+\item Función para buscar evento segun el año introducido Buscar\+Evento\+Historico().
+\item Función para buscar el año en el que sucedio el evento introducido Buscar\+Año\+Historico().
+\item Función to\+String() que une todas las fechas creadas en una misma cadena a mostrar.
+\item Función sort() junto a sus metodos begin() y end().
+\end{DoxyItemize}
+\item \textquotesingle{}\doxylink{main_8cpp}{main.\+cpp}\textquotesingle{}.
+\begin{DoxyItemize}
+\item Creación de las fechas historicas.
+\item Creación de la cronologia de estas.
+\item Ordenación de esta cronologia.
+\item Muestra de la funcionalidad de las funciones Buscar\+Evento\+Historico() y Buscar\+Año\+Historico(). 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

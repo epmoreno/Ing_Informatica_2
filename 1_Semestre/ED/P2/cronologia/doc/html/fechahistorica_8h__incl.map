@@ -1,5 +1,7 @@
 <map id="/home/enriquepm/Documentos/GitHub/Ing_Informatica_2/1_Semestre/ED/P2/cronologia/include/fechahistorica.h" name="/home/enriquepm/Documentos/GitHub/Ing_Informatica_2/1_Semestre/ED/P2/cronologia/include/fechahistorica.h">
-<area shape="rect" id="node1" title="Este archivo contiene la definición de la clase FechaHistorica." alt="" coords="5,5,237,76"/>
-<area shape="rect" id="node2" title=" " alt="" coords="47,124,110,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="135,124,193,151"/>
+<area shape="rect" id="Node000001" title="Este archivo contiene la definición de la clase FechaHistorica." alt="" coords="5,5,237,75"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="47,123,110,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,76,92,111,87,109,104,74"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="135,123,193,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,74,155,109,151,111,134,76"/>
 </map>

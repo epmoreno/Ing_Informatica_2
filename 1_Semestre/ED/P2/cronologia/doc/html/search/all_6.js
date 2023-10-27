@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_16',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_17',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['getaño_0',['getAño',['../classFechaHistorica.html#a406e8a04088e23b2b33cf8ef47e7caf0',1,'FechaHistorica']]],
+  ['geteventos_1',['getEventos',['../classFechaHistorica.html#a505395ba28d60d249fe54a6f2734588c',1,'FechaHistorica']]]
 ];

@@ -1,0 +1,61 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\index{/home/enriquepm/Documentos/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/src/main.cpp@{/home/enriquepm/Documentos/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/src/main.cpp}}
+\mbox{\hyperlink{main_8cpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ }
+
+
+
+
+
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}../include/cronologia.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ }
+
+
+
+
+
+
+
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00021}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{classCronologia}{Cronologia}}\ cronologia;\ \textcolor{comment}{//\ creamos\ una\ cronologia}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ Creamos\ Eventos\ (Año,Evento)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{classFechaHistorica}{FechaHistorica}}\ evento1(1903,\ \{\textcolor{stringliteral}{"{}A\ Fast\ Fourier\ Transform\ algorithm\ presented\ by\ Carle\ David\ Tolmé\ Runge"{}}\});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{classFechaHistorica}{FechaHistorica}}\ evento2(1969,\ \{\textcolor{stringliteral}{"{}Alunizaje\ del\ Apolo\ 11"{}}\});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{classFechaHistorica}{FechaHistorica}}\ evento3(1991,\ \{\textcolor{stringliteral}{"{}Disolución\ de\ la\ Unión\ Soviética"{}}\});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{classFechaHistorica}{FechaHistorica}}\ evento4(1936,\ \{\textcolor{stringliteral}{"{}Turing\ machine"{}},\textcolor{stringliteral}{"{}an\ abstract\ machine\ developed\ by\ Alan\ Turing"{}},\textcolor{stringliteral}{"{}with\ others\ developed\ the\ modern\ notion\ of\ algorithm"{}}\});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ Introducimos\ Eventos\ en\ Cronologia}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_a457ee5c23836720996457617a96311c5}{addFechaHistorica}}(evento1);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_a457ee5c23836720996457617a96311c5}{addFechaHistorica}}(evento2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_a457ee5c23836720996457617a96311c5}{addFechaHistorica}}(evento3);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_a457ee5c23836720996457617a96311c5}{addFechaHistorica}}(evento4);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ Ordenamos\ por\ año\ los\ eventos\ e\ Imprimimos}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ \ \ \ \ std::sort(cronologia.\mbox{\hyperlink{classCronologia_ae1730a9834023fa37d2cb4fd22d3a1d4}{begin}}(),\ cronologia.\mbox{\hyperlink{classCronologia_a570bcdc2c6bcea3cc00e74f28f3dfd07}{end}}(),\ [](\textcolor{keyword}{const}\ \mbox{\hyperlink{classFechaHistorica}{FechaHistorica}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classFechaHistorica}{FechaHistorica}}\&\ b)\ \{\ \textcolor{comment}{//\ funcion\ sort()\ la\ utilizamos\ para\ recorrer\ el\ vector\ fechashistoricas,\ iniciando\ previamente\ begin()\ y\ end()\ en\ cronologia.h,}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ return\ a.getAño()\ <\ b.getAño();\ \textcolor{comment}{//organizandolo\ segun\ su\ fecha}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ Mostramos\ los\ eventos\ ya\ ordenados\ de\ mayor\ a\ menos\ en\ base\ al\ año}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/Eventos-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Aplicamos\ la\ funcion\ toString()\ de\ la\ clase\ cronologia\ en\ la\ cual\ hemos\ almacenado\ los\ datos\ de\ fechasHistoricas\ }}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ y\ nos\ mostrara\ estas\ convertiudas\ ya\ en\ cadena*/}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ std::cout\ <<\ cronologia.\mbox{\hyperlink{classCronologia_af7014e5d781cd3f5f375089beb000226}{toString}}()\ <<\ std::endl;\textcolor{comment}{//\ }}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ Buscamos\ un\ evento\ por\ fecha}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_a3b4f3b81fa9eb87cc7754528570dff6d}{BuscarEventoHistorico}}(1991);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_a3b4f3b81fa9eb87cc7754528570dff6d}{BuscarEventoHistorico}}(2000);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ ;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Buscamos\ una\ fecha\ por\ el\ evento\ sucedido\ en\ ella}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_acd16431c156417a5d8c88211cbe75d02}{BuscarAñoHistorico}}(\textcolor{stringliteral}{"{}Turing\ machine"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ cronologia.\mbox{\hyperlink{classCronologia_acd16431c156417a5d8c88211cbe75d02}{BuscarAñoHistorico}}(\textcolor{stringliteral}{"{}UNKNOWN"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \}}
+
+\end{DoxyCode}

@@ -1,14 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cronologia y Fechas Historicas: Fichero Fuente /home/enriquepm/Documentos/GitHub/Ing_Informatica_2/1_Semestre/ED/P2/cronologia/src/fechahistorica.cpp</title>
+<title>Cronologia y Fechas Historicas: Archivo de código fuente /home/enriquepm/Documentos/GitHub/Ing_Informatica_2/1_Semestre/ED/P2/cronologia/src/fechahistorica.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +20,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">Cronologia y Fechas Historicas
    </div>
   </td>
@@ -29,22 +30,28 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.9.1 -->
+<!-- Generado por Doxygen 1.10.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Buscar');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -54,9 +61,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,38 +79,43 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">fechahistorica.cpp</div>  </div>
+  <div class="headertitle"><div class="title">fechahistorica.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="fechahistorica_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../include/fechahistorica.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#ae8cc2aa521ff7c4d76dcb98465966daa">   14</a></span>&#160;<a class="code" href="classFechaHistorica.html#ae8cc2aa521ff7c4d76dcb98465966daa">FechaHistorica::FechaHistorica</a>(<span class="keywordtype">int</span> año, <span class="keyword">const</span> std::vector&lt;std::string&gt; eventos) : año(año), eventos(eventos) {}</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#a406e8a04088e23b2b33cf8ef47e7caf0">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classFechaHistorica.html#a406e8a04088e23b2b33cf8ef47e7caf0">FechaHistorica::getAño</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFechaHistorica.html#aea01b7ef919ef6ac3da3d1baf56adff2">año</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#a505395ba28d60d249fe54a6f2734588c">   28</a></span>&#160;<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code" href="classFechaHistorica.html#a505395ba28d60d249fe54a6f2734588c">FechaHistorica::getEventos</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFechaHistorica.html#a4194658f71a9041992a8d67890c50f92">eventos</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#a010a1370db96ebb1bc90bf3a4150b6cf">   48</a></span>&#160;std::string <a class="code" href="classFechaHistorica.html#a010a1370db96ebb1bc90bf3a4150b6cf">FechaHistorica::toString</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::string resultado = std::to_string(<a class="code" href="classFechaHistorica.html#aea01b7ef919ef6ac3da3d1baf56adff2">año</a>) + <span class="stringliteral">&quot;: &quot;</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; evento : <a class="code" href="classFechaHistorica.html#a4194658f71a9041992a8d67890c50f92">eventos</a>) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        resultado += evento + <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    resultado.pop_back();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    resultado.pop_back();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> resultado;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="ttc" id="aclassFechaHistorica_html_a010a1370db96ebb1bc90bf3a4150b6cf"><div class="ttname"><a href="classFechaHistorica.html#a010a1370db96ebb1bc90bf3a4150b6cf">FechaHistorica::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Convierte la fecha histórica a una cadena de texto.</div><div class="ttdef"><b>Definition:</b> <a href="fechahistorica_8cpp_source.html#l00048">fechahistorica.cpp:48</a></div></div>
-<div class="ttc" id="aclassFechaHistorica_html_a406e8a04088e23b2b33cf8ef47e7caf0"><div class="ttname"><a href="classFechaHistorica.html#a406e8a04088e23b2b33cf8ef47e7caf0">FechaHistorica::getAño</a></div><div class="ttdeci">int getAño() const</div><div class="ttdoc">Metodo que devuelve el año de la fecha historica.</div><div class="ttdef"><b>Definition:</b> <a href="fechahistorica_8cpp_source.html#l00020">fechahistorica.cpp:20</a></div></div>
-<div class="ttc" id="aclassFechaHistorica_html_a4194658f71a9041992a8d67890c50f92"><div class="ttname"><a href="classFechaHistorica.html#a4194658f71a9041992a8d67890c50f92">FechaHistorica::eventos</a></div><div class="ttdeci">std::vector&lt; std::string &gt; eventos</div><div class="ttdoc">Eventos de la fecha histórica.</div><div class="ttdef"><b>Definition:</b> <a href="fechahistorica_8h_source.html#l00025">fechahistorica.h:25</a></div></div>
-<div class="ttc" id="aclassFechaHistorica_html_a505395ba28d60d249fe54a6f2734588c"><div class="ttname"><a href="classFechaHistorica.html#a505395ba28d60d249fe54a6f2734588c">FechaHistorica::getEventos</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; getEventos() const</div><div class="ttdoc">Metodo que devuelve el vector de eventos.</div><div class="ttdef"><b>Definition:</b> <a href="fechahistorica_8cpp_source.html#l00028">fechahistorica.cpp:28</a></div></div>
-<div class="ttc" id="aclassFechaHistorica_html_ae8cc2aa521ff7c4d76dcb98465966daa"><div class="ttname"><a href="classFechaHistorica.html#ae8cc2aa521ff7c4d76dcb98465966daa">FechaHistorica::FechaHistorica</a></div><div class="ttdeci">FechaHistorica(int año, const std::vector&lt; std::string &gt; eventos)</div><div class="ttdoc">Constructor de la clase FechaHistorica.</div><div class="ttdef"><b>Definition:</b> <a href="fechahistorica_8cpp_source.html#l00014">fechahistorica.cpp:14</a></div></div>
-<div class="ttc" id="aclassFechaHistorica_html_aea01b7ef919ef6ac3da3d1baf56adff2"><div class="ttname"><a href="classFechaHistorica.html#aea01b7ef919ef6ac3da3d1baf56adff2">FechaHistorica::año</a></div><div class="ttdeci">int año</div><div class="ttdoc">Año de la fecha histórica.</div><div class="ttdef"><b>Definition:</b> <a href="fechahistorica_8h_source.html#l00024">fechahistorica.h:24</a></div></div>
+<a href="fechahistorica_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../include/fechahistorica.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#ae8cc2aa521ff7c4d76dcb98465966daa">   14</a></span><a class="code hl_function" href="classFechaHistorica.html#ae8cc2aa521ff7c4d76dcb98465966daa">FechaHistorica::FechaHistorica</a>(<span class="keywordtype">int</span> año, <span class="keyword">const</span> std::vector&lt;std::string&gt; eventos) : año(año), eventos(eventos) {}</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#a406e8a04088e23b2b33cf8ef47e7caf0">   20</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classFechaHistorica.html#a406e8a04088e23b2b33cf8ef47e7caf0">FechaHistorica::getAño</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classFechaHistorica.html#aea01b7ef919ef6ac3da3d1baf56adff2">año</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#a505395ba28d60d249fe54a6f2734588c">   28</a></span><span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code hl_function" href="classFechaHistorica.html#a505395ba28d60d249fe54a6f2734588c">FechaHistorica::getEventos</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classFechaHistorica.html#a4194658f71a9041992a8d67890c50f92">eventos</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classFechaHistorica.html#a010a1370db96ebb1bc90bf3a4150b6cf">   48</a></span>std::string <a class="code hl_function" href="classFechaHistorica.html#a010a1370db96ebb1bc90bf3a4150b6cf">FechaHistorica::toString</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::string resultado = std::to_string(<a class="code hl_variable" href="classFechaHistorica.html#aea01b7ef919ef6ac3da3d1baf56adff2">año</a>) + <span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; evento : <a class="code hl_variable" href="classFechaHistorica.html#a4194658f71a9041992a8d67890c50f92">eventos</a>) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        resultado += evento + <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    resultado.pop_back();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    resultado.pop_back();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> resultado;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
+<div class="ttc" id="aclassFechaHistorica_html_a010a1370db96ebb1bc90bf3a4150b6cf"><div class="ttname"><a href="classFechaHistorica.html#a010a1370db96ebb1bc90bf3a4150b6cf">FechaHistorica::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Convierte la fecha histórica a una cadena de texto.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">fechahistorica.cpp:48</a></div></div>
+<div class="ttc" id="aclassFechaHistorica_html_a406e8a04088e23b2b33cf8ef47e7caf0"><div class="ttname"><a href="classFechaHistorica.html#a406e8a04088e23b2b33cf8ef47e7caf0">FechaHistorica::getAño</a></div><div class="ttdeci">int getAño() const</div><div class="ttdoc">Metodo que devuelve el año de la fecha historica.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">fechahistorica.cpp:20</a></div></div>
+<div class="ttc" id="aclassFechaHistorica_html_a4194658f71a9041992a8d67890c50f92"><div class="ttname"><a href="classFechaHistorica.html#a4194658f71a9041992a8d67890c50f92">FechaHistorica::eventos</a></div><div class="ttdeci">std::vector&lt; std::string &gt; eventos</div><div class="ttdoc">Eventos de la fecha histórica.</div><div class="ttdef"><b>Definition</b> <a href="fechahistorica_8h_source.html#l00025">fechahistorica.h:25</a></div></div>
+<div class="ttc" id="aclassFechaHistorica_html_a505395ba28d60d249fe54a6f2734588c"><div class="ttname"><a href="classFechaHistorica.html#a505395ba28d60d249fe54a6f2734588c">FechaHistorica::getEventos</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; getEventos() const</div><div class="ttdoc">Metodo que devuelve el vector de eventos.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">fechahistorica.cpp:28</a></div></div>
+<div class="ttc" id="aclassFechaHistorica_html_ae8cc2aa521ff7c4d76dcb98465966daa"><div class="ttname"><a href="classFechaHistorica.html#ae8cc2aa521ff7c4d76dcb98465966daa">FechaHistorica::FechaHistorica</a></div><div class="ttdeci">FechaHistorica(int año, const std::vector&lt; std::string &gt; eventos)</div><div class="ttdoc">Constructor de la clase FechaHistorica.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">fechahistorica.cpp:14</a></div></div>
+<div class="ttc" id="aclassFechaHistorica_html_aea01b7ef919ef6ac3da3d1baf56adff2"><div class="ttname"><a href="classFechaHistorica.html#aea01b7ef919ef6ac3da3d1baf56adff2">FechaHistorica::año</a></div><div class="ttdeci">int año</div><div class="ttdoc">Año de la fecha histórica.</div><div class="ttdef"><b>Definition</b> <a href="fechahistorica_8h_source.html#l00024">fechahistorica.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
 </small></address>
 </body>
 </html>

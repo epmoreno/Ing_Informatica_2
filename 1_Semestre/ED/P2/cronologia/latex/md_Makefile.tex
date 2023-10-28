@@ -1,0 +1,165 @@
+\chapter{Makefile}
+\hypertarget{md_Makefile}{}\label{md_Makefile}\index{Makefile@{Makefile}}
+\doxysectlink{md_Readme}{Página principal}{0} \hypertarget{md_Makefile_autotoc_md0}{}\doxysection{\texorpdfstring{¿\+Que hace el archivo Makefile?}{¿Que hace el archivo Makefile?}}\label{md_Makefile_autotoc_md0}
+
+\begin{DoxyItemize}
+\item \href{./Makefile}{\texttt{ Makefile}} ~\newline
+ 
+\end{DoxyItemize}\hypertarget{md_Makefile_autotoc_md1}{}\doxysubsection{\texorpdfstring{Variables.}{Variables.}}\label{md_Makefile_autotoc_md1}
+
+\begin{DoxyItemize}
+\item INCLUDE = include\+: Define la variable INCLUDE que se refiere al directorio include.
+\item LIB = lib\+: Define la variable LIB que se refiere al directorio lib.
+\item OBJ = obj\+: Define la variable OBJ que se refiere al directorio obj.
+\item SRC = src\+: Define la variable SRC que se refiere al directorio src.
+\item BIN = bin\+: Define la variable BIN que se refiere al directorio bin.
+\item CXX = g++\+: Define la variable CXX que se refiere al compilador g++.
+\item CPPFLAGS = -\/Wall -\/g -\/c\+: Define la variable CPPFLAGS que se refiere a las opciones del compilador. -\/Wall activa todos los warnings, -\/g genera información de depuración y -\/c compila o ensambla el código fuente sin enlazar.
+\item EXEC = cronologia\+: Define la variable EXEC que se refiere al nombre del ejecutable.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{INCLUDE\ =\ include}
+\DoxyCodeLine{LIB\ \ \ \ \ =\ lib}
+\DoxyCodeLine{OBJ\ \ \ \ \ =\ obj}
+\DoxyCodeLine{SRC\ \ \ \ \ =\ src}
+\DoxyCodeLine{BIN\ \ \ \ \ =\ bin}
+\DoxyCodeLine{CXX\ \ \ \ \ =\ g++}
+\DoxyCodeLine{CPPFLAGS\ =\ -\/Wall\ -\/g\ -\/c\ }
+\DoxyCodeLine{EXEC\ =\ cronologia}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md2}{}\doxysubsection{\texorpdfstring{Archivos fuente .\+cpp.}{Archivos fuente .cpp.}}\label{md_Makefile_autotoc_md2}
+
+\begin{DoxyItemize}
+\item SRCS = \$(wildcard \$ (SRC)/\texorpdfstring{$\ast$}{*}.cpp) \+: Es una lista de todos los archivos cpp, donde wildcard crea esta lista; \$(wildcard \$ (SRC)/\texorpdfstring{$\ast$}{*}.cpp) creamos una variable SRCS=\$(), en la que wildcard creara una lista del conjunto de archivos .cpp == \textquotesingle{}\texorpdfstring{$\ast$}{*}.cpp\textquotesingle{} en src == \textquotesingle{}\$ (SRC)/\textquotesingle{}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SRCS\ =\ \$(wildcard\ \$(SRC)/*.cpp)}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md3}{}\doxysubsection{\texorpdfstring{Archivos objeto .\+o.}{Archivos objeto .o.}}\label{md_Makefile_autotoc_md3}
+
+\begin{DoxyItemize}
+\item OBJS = \$(SRCS\+:\$ (SRC)/\%.cpp=\$ (OBJ)/\%.o)\+: Define la variable OBJS que se refiere a todos los archivos .o que se generarán a partir de los archivos .cpp. \textquotesingle{}SRCS\+:\$ (SRC)/\%.cpp\textquotesingle{} son todos los .cpp = \$ (OBJ)/\%.o los .o que se generaran de los .cpp
+\begin{DoxyItemize}
+\item SRCS\+: Este es el objetivo de la regla. En este caso, SRCS es probablemente una variable que se utiliza para almacenar una lista de archivos fuente.
+\item \$ (SRC)/\%.cpp\+: Este es el patrón de la regla. \$ (SRC) es la variable que almacena el directorio src. \%.cpp es un comodín que coincide con cualquier archivo con la extensión .cpp en ese directorio
+\item \$ (SRCS\+:\$ (SRC)/\%.cpp=\$ (OBJ)/\%.o)\+: Esto realiza una sustitución de sufijo en la variable SRCS. La sintaxis general para una sustitución de sufijo es \$(var\+:a=b), que reemplaza el sufijo a en cada espacio separado por palabras en var con b.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+En este caso, \$ (SRC)/\%.cpp es el sufijo a reemplazar y \$ (OBJ)/\%.o es el sufijo con el que reemplazarlo. Por lo tanto, para cada archivo .cpp en SRCS que esté en el directorio \$ (SRC), se reemplaza con un archivo .o en el directorio \$ (OBJ).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{OBJS\ =\ \$(SRCS:\$(SRC)/\%.cpp=\$(OBJ)/\%.o)}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md4}{}\doxysubsection{\texorpdfstring{Regla por defecto.}{Regla por defecto.}}\label{md_Makefile_autotoc_md4}
+
+\begin{DoxyItemize}
+\item all\+: directories \$ (BIN)/\$ (EXEC)\+: Esta es la regla por defecto. Cuando se ejecuta make sin argumentos, se ejecutan las reglas directories descritas abajo y se crea el ejecutable en \$ (BIN)/\$ (EXEC) siendo esta ultima variable, el archivo.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{all:\ directories\ \$(BIN)/\$(EXEC)}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md5}{}\doxysubsection{\texorpdfstring{Regla para crear los directorios necesarios si no existieran.}{Regla para crear los directorios necesarios si no existieran.}}\label{md_Makefile_autotoc_md5}
+
+\begin{DoxyItemize}
+\item directories\+:\+: Esta es la regla directories. Crea los directorios obj y bin si no existen.
+\begin{DoxyItemize}
+\item mkdir -\/p \+: Crea el directorio obj si no existe.
+\item mkdir -\/p \+: Crea el directorio bin si no existe.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{directories:}
+\DoxyCodeLine{\ \ \ \ mkdir\ -\/p\ \$(OBJ)}
+\DoxyCodeLine{\ \ \ \ mkdir\ -\/p\ \$(BIN)}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md6}{}\doxysubsection{\texorpdfstring{Regla para el ejecutable\+: La siguiente regla creará el ejecutable.}{Regla para el ejecutable: La siguiente regla creará el ejecutable.}}\label{md_Makefile_autotoc_md6}
+
+\begin{DoxyItemize}
+\item \$ (BIN)/\$ (EXEC)\+: \$ (OBJS)\+: Esta es la regla para crear el ejecutable.
+\begin{DoxyItemize}
+\item \$ (BIN)/\$ (EXEC)\+: Este es el objetivo de la regla, es decir, el ejecutable que va existir en la carpeta "{}bin"{}, y que dependera del contenido de \$ (OBJS) que se usara para crear el ejecutable +\$ (CXX) -\/o \$@ \$ (OBJS) -\/I\$ (INCLUDE)\+: Esta es la receta de la regla, que se ejecuta cuando se necesita actualizar el objetivo.
+\begin{DoxyItemize}
+\item la variable que almacena el compilador a usar, -\/o \$@ le dice al compilador que genere un archivo de salida con el nombre del objetivo de la regla, donde "{}-\/o"{} es la configuracion del compilador y "{}\$@"{} es el equitativo a "{}/"{}.  es la lista de archivos objeto que deben ser enlazados. -\/I\$(\+INCLUDE) le dice al compilador dónde buscar archivos de cabecera.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$(BIN)/\$(EXEC):\ \$(OBJS)}
+\DoxyCodeLine{\ \ \ \ \$(CXX)\ -\/o\ \$@\ \$(OBJS)\ -\/I\$(INCLUDE)}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md7}{}\doxysubsection{\texorpdfstring{Regla para los archivos objeto\+: La siguiente regla creará los archivos objeto.}{Regla para los archivos objeto: La siguiente regla creará los archivos objeto.}}\label{md_Makefile_autotoc_md7}
+
+\begin{DoxyItemize}
+\item \$ (OBJ)/\%.o\+: \$ (SRC)/\%.cpp\+: Esta es la regla para crear los archivos objeto. Cada archivo objeto depende de su correspondiente archivo fuente .cpp. Es decir los archivos "{}.\+o"{} \$ (OBJ)/\%.o seran generados gracias a los "{}.\+cpp"{} en "{}src"{} \$ (SRC)/\%.cpp. ~\newline
+
+\begin{DoxyItemize}
+\item \$ (CXX) \$ (CPPFLAGS) -\/o \$@ \$\texorpdfstring{$<$}{<} -\/I\$(\+INCLUDE)\+: Compila los archivos .cpp en un archivo objeto .o respectivamente . Al igual que la anterior sentencia, "{}\$ (\+CXX)"{} = compilador, "{}\$ (\+CPPFLAGS)"{} = reglas de este, "{}-\/o \$@ \$$<$"{} = le dice al compilador que genere un archivo de salida con el nombre del objetivo de la regla, en este caso seria "{}\$$<$"{} que es una variable automatica que se expande al primer prerrequisito , -\/I\$(\+INCLUDE) le dice al compilador dónde buscar archivos de cabecera.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$(OBJ)/\%.o:\ \$(SRC)/\%.cpp}
+\DoxyCodeLine{\ \ \ \ \$(CXX)\ \$(CPPFLAGS)\ -\/o\ \$@\ \$<\ -\/I\$(INCLUDE)}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md8}{}\doxysubsection{\texorpdfstring{Generación de documentación \+: Las siguientes líneas tratarán sobre la generación de documentación.}{Generación de documentación : Las siguientes líneas tratarán sobre la generación de documentación.}}\label{md_Makefile_autotoc_md8}
+Cuando ejecutas make documentacion, Make ejecutará el comando doxygen ./doc/configure
+
+
+\begin{DoxyItemize}
+\item documentacion\+: Este es el objetivo de la regla. En este caso, documentacion es un objetivo personalizado que he definido. Genera la documentación usando Doxygen.
+\begin{DoxyItemize}
+\item doxygen ./doc/configure\+: Ejecuta Doxygen con el archivo de configuración ./doc/configure.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{documentacion:}
+\DoxyCodeLine{\ \ \ \ doxygen\ ./doc/configure}
+
+\end{DoxyCode}
+\hypertarget{md_Makefile_autotoc_md9}{}\doxysubsection{\texorpdfstring{Limpieza\+: Las siguientes líneas tratarán sobre la limpieza.}{Limpieza: Las siguientes líneas tratarán sobre la limpieza.}}\label{md_Makefile_autotoc_md9}
+
+\begin{DoxyItemize}
+\item clean \+: Esta es la regla clean. Limpia los archivos generados durante la compilación.
+\begin{DoxyItemize}
+\item -\/rm \$ (OBJ)/\texorpdfstring{$\ast$}{*} \$ (SRC)/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\sim$}{\string~} /\texorpdfstring{$\ast$}{*}\texorpdfstring{$\sim$}{\string~} ./\texorpdfstring{$\ast$}{*}\texorpdfstring{$\sim$}{\string~}\+: Borra todos los archivos objeto, los archivos temporales y los archivos de respaldo en src,include y en el actual que es la carpeta principal.
+\end{DoxyItemize}
+\item mrproper \+: clean Este es el objetivo de la regla mrproper. Tiene un prerrequisito\+: el objetivo clean.
+\begin{DoxyItemize}
+\item -\/rm \$ (BIN)/\texorpdfstring{$\ast$}{*} doc/html/\texorpdfstring{$\ast$}{*} \+: Borrara todos los archivos en "{}bin"{} y la documentacion generada por doxygen en html, mas la regla "{}clean"{} ya que la tenemos como prerrequisito. Cuando ejecutas make mrproper, Make primero ejecutará la regla clean y después de que se complete la regla clean, Make ejecutará la regla mrproper.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{clean\ :}
+\DoxyCodeLine{\ \ \ \ -\/rm\ \$(OBJ)/*\ \$(SRC)/*\string~\ \$(INCLUDE)/*\string~\ ./*\string~}
+\DoxyCodeLine{}
+\DoxyCodeLine{mrproper\ :\ clean}
+\DoxyCodeLine{\ \ \ \ -\/rm\ \$(BIN)/*\ doc/html/*}
+
+\end{DoxyCode}
+
+
+\doxysectlink{md_Readme}{Página principal}{0} 

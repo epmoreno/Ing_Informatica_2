@@ -33,3 +33,6 @@ viceversa, averiguar el año en el que sucedió algún acontecimiento.
         * Creación de la cronologia de estas.
         * Ordenación de esta cronologia.
         * Muestra de la funcionalidad de las funciones BuscarEventoHistorico() y BuscarAñoHistorico().
+
+## Documentacion Resolutiva
+- [Makefile](./Makefile.md)

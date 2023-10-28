@@ -1,0 +1,13 @@
+<map id="src/cronologia.cpp" name="src/cronologia.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="49,5,189,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,85,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,33,69,71,65,67,105,29"/>
+<area shape="rect" id="Node000003" href="$cronologia_8h.html" title="Este archivo contiene la definición de la clase Cronologia." alt="" coords="109,79,275,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,29,172,67,168,71,129,33"/>
+<area shape="rect" id="Node000004" href="$fechahistorica_8h.html" title="Este archivo contiene la definición de la clase FechaHistorica." alt="" coords="97,152,287,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="195,104,195,138,189,138,189,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="118,225,181,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="187,179,165,215,161,212,183,176"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="205,225,264,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="201,176,223,212,219,215,197,179"/>
+</map>

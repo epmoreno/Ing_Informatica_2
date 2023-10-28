@@ -1,0 +1,58 @@
+\doxysection{fechahistorica.\+cpp}
+\hypertarget{fechahistorica_8cpp_source}{}\label{fechahistorica_8cpp_source}\index{src/fechahistorica.cpp@{src/fechahistorica.cpp}}
+\mbox{\hyperlink{fechahistorica_8cpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}../include/fechahistorica.h"{}}}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00002}00002\ }
+
+
+
+
+
+
+
+
+
+
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00014}\mbox{\hyperlink{classFechaHistorica_ae8cc2aa521ff7c4d76dcb98465966daa}{00014}}\ \mbox{\hyperlink{classFechaHistorica_ae8cc2aa521ff7c4d76dcb98465966daa}{FechaHistorica::FechaHistorica}}(\textcolor{keywordtype}{int}\ año,\ \textcolor{keyword}{const}\ std::vector<std::string>\ eventos)\ :\ año(año),\ eventos(eventos)\ \{\}}
+
+
+
+
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00020}\mbox{\hyperlink{classFechaHistorica_a406e8a04088e23b2b33cf8ef47e7caf0}{00020}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFechaHistorica_a406e8a04088e23b2b33cf8ef47e7caf0}{FechaHistorica::getAño}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classFechaHistorica_aea01b7ef919ef6ac3da3d1baf56adff2}{año}};}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00022}00022\ \}}
+
+
+
+
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00028}\mbox{\hyperlink{classFechaHistorica_a505395ba28d60d249fe54a6f2734588c}{00028}}\ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{classFechaHistorica_a505395ba28d60d249fe54a6f2734588c}{FechaHistorica::getEventos}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classFechaHistorica_a4194658f71a9041992a8d67890c50f92}{eventos}};}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00030}00030\ \}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00048}\mbox{\hyperlink{classFechaHistorica_a010a1370db96ebb1bc90bf3a4150b6cf}{00048}}\ std::string\ \mbox{\hyperlink{classFechaHistorica_a010a1370db96ebb1bc90bf3a4150b6cf}{FechaHistorica::toString}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00049}00049\ \ \ \ \ std::string\ resultado\ =\ std::to\_string(\mbox{\hyperlink{classFechaHistorica_aea01b7ef919ef6ac3da3d1baf56adff2}{año}})\ +\ \textcolor{stringliteral}{"{}:\ "{}};}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ evento\ :\ \mbox{\hyperlink{classFechaHistorica_a4194658f71a9041992a8d67890c50f92}{eventos}})\ \{}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ resultado\ +=\ evento\ +\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00053}00053\ \ \ \ \ resultado.pop\_back();}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00054}00054\ \ \ \ \ resultado.pop\_back();}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ resultado;}
+\DoxyCodeLine{\Hypertarget{fechahistorica_8cpp_source_l00056}00056\ \}}
+
+\end{DoxyCode}

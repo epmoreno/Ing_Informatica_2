@@ -1,37 +1,14 @@
 \doxysection{cronologia.\+cpp}
-\hypertarget{cronologia_8cpp_source}{}\label{cronologia_8cpp_source}\index{/home/enriquepm/Documentos/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/src/cronologia.cpp@{/home/enriquepm/Documentos/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/src/cronologia.cpp}}
+\hypertarget{cronologia_8cpp_source}{}\label{cronologia_8cpp_source}\index{C:/Users/Enriq/Documents/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/src/cronologia.cpp@{C:/Users/Enriq/Documents/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/src/cronologia.cpp}}
 \mbox{\hyperlink{cronologia_8cpp}{Ir a la documentación de este archivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../include/cronologia.h"{}}\ \textcolor{comment}{//incluimos\ el\ archivo\ necesario}}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00003}00003\ }
-
-
-
-
-
-
-
-
-
-
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00015}\mbox{\hyperlink{classCronologia_a457ee5c23836720996457617a96311c5}{00015}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCronologia_a457ee5c23836720996457617a96311c5}{Cronologia::addFechaHistorica}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFechaHistorica}{FechaHistorica}}\&\ fechaHistorica)\{}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00016}00016\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{classCronologia_a838c1b0c9910667ca982ae538fe2e34c}{fechasHistoricas}}.push\_back(fechaHistorica);\ \textcolor{comment}{//Metemos\ en\ fechashistoricas\ fechahistorica}}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00018}00018\ \}}
-
-
-
-
-
-
-
-
-
-
-
-
-
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00033}\mbox{\hyperlink{classCronologia_a3b4f3b81fa9eb87cc7754528570dff6d}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCronologia_a3b4f3b81fa9eb87cc7754528570dff6d}{Cronologia::BuscarEventoHistorico}}(\textcolor{keywordtype}{int}\ año\_E)\{}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00034}00034\ }
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ fechaHistorica\ :\ \mbox{\hyperlink{classCronologia_a838c1b0c9910667ca982ae538fe2e34c}{fechasHistoricas}})\{\textcolor{comment}{//\ Recorremos\ cada\ fechaHistorica\ dento\ del\ vector\ de\ fechasHistoricas}}
@@ -46,19 +23,6 @@
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00044}00044\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00045}00045\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}No\ se\ ha\ encontrado\ el\ año.\(\backslash\)n"{}};}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00046}00046\ \}}
-
-
-
-
-
-
-
-
-
-
-
-
-
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00061}\mbox{\hyperlink{classCronologia_acd16431c156417a5d8c88211cbe75d02}{00061}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCronologia_acd16431c156417a5d8c88211cbe75d02}{Cronologia::BuscarAñoHistorico}}(\textcolor{keyword}{const}\ std::string\&\ nombreEvento)\{}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ fechaHistorica\ :\ \mbox{\hyperlink{classCronologia_a838c1b0c9910667ca982ae538fe2e34c}{fechasHistoricas}})\{\textcolor{comment}{//\ Recorremos\ cada\ fechaHistorica\ dento\ del\ vector\ fechasHistoricas}}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ eventos\ =\ fechaHistorica.getEventos();\ \textcolor{comment}{//almacenamos\ los\ eventos\ de\ la\ fechaHistorica}}
@@ -73,22 +37,6 @@
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00072}00072\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00073}00073\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}No\ se\ ha\ encontrado\ el\ evento.\(\backslash\)n"{}};}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00074}00074\ \}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00092}\mbox{\hyperlink{classCronologia_af7014e5d781cd3f5f375089beb000226}{00092}}\ std::string\ \mbox{\hyperlink{classCronologia_af7014e5d781cd3f5f375089beb000226}{Cronologia::toString}}()\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00093}00093\ \ \ \ \ std::string\ resultado;\ \textcolor{comment}{//variable\ resultado}}
 \DoxyCodeLine{\Hypertarget{cronologia_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ fechaHistorica\ :\ \mbox{\hyperlink{classCronologia_a838c1b0c9910667ca982ae538fe2e34c}{fechasHistoricas}})\{\ \textcolor{comment}{//recorre\ cada\ fechahistorica\ en\ el\ vector\ fechashistoricas}}

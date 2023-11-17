@@ -1,0 +1,12 @@
+digraph "C:/Users/Enriq/Documents/GitHub/Ing_Informatica_2/1_Semestre/ED/P2/cronologia/include/cronologia.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="C:/Users/Enriq/Documents\l/GitHub/Ing_Informatica\l_2/1_Semestre/ED/P2/cronologia\l/include/cronologia.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Este archivo contiene la definición de la clase Cronologia."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="C:/Users/Enriq/Documents\l/GitHub/Ing_Informatica\l_2/1_Semestre/ED/P2/cronologia\l/src/cronologia.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cronologia_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="C:/Users/Enriq/Documents\l/GitHub/Ing_Informatica\l_2/1_Semestre/ED/P2/cronologia\l/src/main.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Este archivo contiene la función principal del programa."];
+}

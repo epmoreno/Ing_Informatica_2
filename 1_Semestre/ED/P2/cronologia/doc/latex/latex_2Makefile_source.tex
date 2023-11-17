@@ -1,0 +1,33 @@
+\doxysection{Makefile}
+\hypertarget{latex_2Makefile_source}{}\label{latex_2Makefile_source}\index{/home/enriquepm/Documentos/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/latex/Makefile@{/home/enriquepm/Documentos/GitHub/Ing\_Informatica\_2/1\_Semestre/ED/P2/cronologia/latex/Makefile}}
+\mbox{\hyperlink{latex_2Makefile}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00001}00001\ LATEX\_CMD?=pdflatex}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00002}00002\ MKIDX\_CMD?=makeindex}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00003}00003\ BIBTEX\_CMD?=bibtex}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00004}00004\ LATEX\_COUNT?=8}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00005}00005\ MANUAL\_FILE?=refman}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00007}00007\ all:\ \$(MANUAL\_FILE).pdf}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00009}00009\ pdf:\ \$(MANUAL\_FILE).pdf}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00011}00011\ \$(MANUAL\_FILE).pdf:\ clean\ \$(MANUAL\_FILE).tex}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00012}00012\ \ \ \ \ \$(LATEX\_CMD)\ \$(MANUAL\_FILE)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00013}00013\ \ \ \ \ \$(MKIDX\_CMD)\ \$(MANUAL\_FILE).idx}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00014}00014\ \ \ \ \ \$(LATEX\_CMD)\ \$(MANUAL\_FILE)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00015}00015\ \ \ \ \ latex\_count=\$(LATEX\_COUNT)\ ;\ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00016}00016\ \ \ \ \ while\ grep\ -\/E\ -\/s\ 'Rerun\ (LaTeX|to\ get\ cross-\/references\ right|to\ get\ bibliographical\ references\ right)'\ \$(MANUAL\_FILE).log\ \&\&\ [\ \$\$latex\_count\ -\/gt\ 0\ ]\ ;\(\backslash\)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00017}00017\ \ \ \ \ \ \ \ \ do\ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ echo\ "{}Rerunning\ latex...."{}\ ;\(\backslash\)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \$(LATEX\_CMD)\ \$(MANUAL\_FILE)\ ;\(\backslash\)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ latex\_count=`expr\ \$\$latex\_count\ -\/\ 1`\ ;\(\backslash\)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00021}00021\ \ \ \ \ \ \ \ \ done}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00022}00022\ \ \ \ \ \$(MKIDX\_CMD)\ \$(MANUAL\_FILE).idx}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00023}00023\ \ \ \ \ \$(LATEX\_CMD)\ \$(MANUAL\_FILE)}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00026}00026\ clean:}
+\DoxyCodeLine{\Hypertarget{latex_2Makefile_source_l00027}00027\ \ \ \ \ rm\ -\/f\ *.ps\ *.dvi\ *.aux\ *.toc\ *.idx\ *.ind\ *.ilg\ *.log\ *.out\ *.brf\ *.blg\ *.bbl\ \$(MANUAL\_FILE).pdf}
+
+\end{DoxyCode}

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['año_0',['año',['../classFechaHistorica.html#aea01b7ef919ef6ac3da3d1baf56adff2',1,'FechaHistorica']]],
-  ['a_20y_20documentación_20del_20software_1',['T.D.A. y Documentación del software',['../index.html',1,'']]],
-  ['addfechahistorica_2',['addFechaHistorica',['../classCronologia.html#a457ee5c23836720996457617a96311c5',1,'Cronologia']]]
+  ['_3a_20las_20siguientes_20líneas_20tratarán_20sobre_20la_20generación_20de_20documentación_0',['Generación de documentación : Las siguientes líneas tratarán sobre la generación de documentación.',['../md__2home_2enriquepm_2Documentos_2GitHub_2Ing__Informatica__2_21__Semestre_2ED_2P2_2cronologia_2Makefile.html#autotoc_md8',1,'']]]
 ];

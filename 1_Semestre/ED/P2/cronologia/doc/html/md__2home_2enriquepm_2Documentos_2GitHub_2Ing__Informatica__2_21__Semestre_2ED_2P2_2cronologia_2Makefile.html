@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cronologia y Fechas Historicas: Makefile</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cronologia y Fechas Historicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">Makefile</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="el" href="index.html#md__2home_2enriquepm_2Documentos_2GitHub_2Ing__Informatica__2_21__Semestre_2ED_2P2_2cronologia_2Readme">Página principal</a> </p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+¿Que hace el archivo Makefile?</h1>
+<ul>
+<li><a href="./Makefile">Makefile</a> <br  />
+ </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Variables.</h2>
+<ul>
+<li>INCLUDE = include: Define la variable INCLUDE que se refiere al directorio include.</li>
+<li>LIB = lib: Define la variable LIB que se refiere al directorio lib.</li>
+<li>OBJ = obj: Define la variable OBJ que se refiere al directorio obj.</li>
+<li>SRC = src: Define la variable SRC que se refiere al directorio src.</li>
+<li>BIN = bin: Define la variable BIN que se refiere al directorio bin.</li>
+<li>CXX = g++: Define la variable CXX que se refiere al compilador g++.</li>
+<li>CPPFLAGS = -Wall -g -c: Define la variable CPPFLAGS que se refiere a las opciones del compilador. -Wall activa todos los warnings, -g genera información de depuración y -c compila o ensambla el código fuente sin enlazar.</li>
+<li>EXEC = cronologia: Define la variable EXEC que se refiere al nombre del ejecutable.</li>
+</ul>
+<div class="fragment"><div class="line">INCLUDE = include</div>
+<div class="line">LIB     = lib</div>
+<div class="line">OBJ     = obj</div>
+<div class="line">SRC     = src</div>
+<div class="line">BIN     = bin</div>
+<div class="line">CXX     = g++</div>
+<div class="line">CPPFLAGS = -Wall -g -c </div>
+<div class="line">EXEC = cronologia</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+Archivos fuente .cpp.</h2>
+<ul>
+<li>SRCS = $(wildcard $ (SRC)/*.cpp) : Es una lista de todos los archivos cpp, donde wildcard crea esta lista; $(wildcard $ (SRC)/*.cpp) creamos una variable SRCS=$(), en la que wildcard creara una lista del conjunto de archivos .cpp == '*.cpp' en src == '$ (SRC)/'</li>
+</ul>
+<div class="fragment"><div class="line">SRCS = $(wildcard $(SRC)/*.cpp)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+Archivos objeto .o.</h2>
+<ul>
+<li>OBJS = $(SRCS:$ (SRC)/%.cpp=$ (OBJ)/%.o): Define la variable OBJS que se refiere a todos los archivos .o que se generarán a partir de los archivos .cpp. 'SRCS:$ (SRC)/%.cpp' son todos los .cpp = $ (OBJ)/%.o los .o que se generaran de los .cpp<ul>
+<li>SRCS: Este es el objetivo de la regla. En este caso, SRCS es probablemente una variable que se utiliza para almacenar una lista de archivos fuente.</li>
+<li>$ (SRC)/%.cpp: Este es el patrón de la regla. $ (SRC) es la variable que almacena el directorio src. %.cpp es un comodín que coincide con cualquier archivo con la extensión .cpp en ese directorio</li>
+<li>$ (SRCS:$ (SRC)/%.cpp=$ (OBJ)/%.o): Esto realiza una sustitución de sufijo en la variable SRCS. La sintaxis general para una sustitución de sufijo es $(var:a=b), que reemplaza el sufijo a en cada espacio separado por palabras en var con b.</li>
+</ul>
+</li>
+</ul>
+<p>En este caso, $ (SRC)/%.cpp es el sufijo a reemplazar y $ (OBJ)/%.o es el sufijo con el que reemplazarlo. Por lo tanto, para cada archivo .cpp en SRCS que esté en el directorio $ (SRC), se reemplaza con un archivo .o en el directorio $ (OBJ).</p>
+<div class="fragment"><div class="line">OBJS = $(SRCS:$(SRC)/%.cpp=$(OBJ)/%.o)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+Regla por defecto.</h2>
+<ul>
+<li>all: directories $ (BIN)/$ (EXEC): Esta es la regla por defecto. Cuando se ejecuta make sin argumentos, se ejecutan las reglas directories descritas abajo y se crea el ejecutable en $ (BIN)/$ (EXEC) siendo esta ultima variable, el archivo.</li>
+</ul>
+<div class="fragment"><div class="line">all: directories $(BIN)/$(EXEC)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Regla para crear los directorios necesarios si no existieran.</h2>
+<ul>
+<li>directories:: Esta es la regla directories. Crea los directorios obj y bin si no existen.<ul>
+<li>mkdir -p : Crea el directorio obj si no existe.</li>
+<li>mkdir -p : Crea el directorio bin si no existe.</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">directories:</div>
+<div class="line">    mkdir -p $(OBJ)</div>
+<div class="line">    mkdir -p $(BIN)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+Regla para el ejecutable: La siguiente regla creará el ejecutable.</h2>
+<ul>
+<li>$ (BIN)/$ (EXEC): $ (OBJS): Esta es la regla para crear el ejecutable.<ul>
+<li>$ (BIN)/$ (EXEC): Este es el objetivo de la regla, es decir, el ejecutable que va existir en la carpeta "bin", y que dependera del contenido de $ (OBJS) que se usara para crear el ejecutable +$ (CXX) -o $@ $ (OBJS) -I$ (INCLUDE): Esta es la receta de la regla, que se ejecuta cuando se necesita actualizar el objetivo.<ul>
+<li>la variable que almacena el compilador a usar, -o $@ le dice al compilador que genere un archivo de salida con el nombre del objetivo de la regla, donde "-o" es la configuracion del compilador y "$@" es el equitativo a "/".  es la lista de archivos objeto que deben ser enlazados. -I$(INCLUDE) le dice al compilador dónde buscar archivos de cabecera.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">$(BIN)/$(EXEC): $(OBJS)</div>
+<div class="line">    $(CXX) -o $@ $(OBJS) -I$(INCLUDE)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+Regla para los archivos objeto: La siguiente regla creará los archivos objeto.</h2>
+<ul>
+<li>$ (OBJ)/%.o: $ (SRC)/%.cpp: Esta es la regla para crear los archivos objeto. Cada archivo objeto depende de su correspondiente archivo fuente .cpp. Es decir los archivos ".o" $ (OBJ)/%.o seran generados gracias a los ".cpp" en "src" $ (SRC)/%.cpp. <br  />
+<ul>
+<li>$ (CXX) $ (CPPFLAGS) -o $@ $&lt; -I$(INCLUDE): Compila los archivos .cpp en un archivo objeto .o respectivamente . Al igual que la anterior sentencia, "$ (CXX)" = compilador, "$ (CPPFLAGS)" = reglas de este, "-o $@ $&lt;" = le dice al compilador que genere un archivo de salida con el nombre del objetivo de la regla, en este caso seria "$&lt;" que es una variable automatica que se expande al primer prerrequisito , -I$(INCLUDE) le dice al compilador dónde buscar archivos de cabecera.</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">$(OBJ)/%.o: $(SRC)/%.cpp</div>
+<div class="line">    $(CXX) $(CPPFLAGS) -o $@ $&lt; -I$(INCLUDE)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+Generación de documentación : Las siguientes líneas tratarán sobre la generación de documentación.</h2>
+<p>Cuando ejecutas make documentacion, Make ejecutará el comando doxygen ./doc/configure</p>
+<ul>
+<li>documentacion: Este es el objetivo de la regla. En este caso, documentacion es un objetivo personalizado que he definido. Genera la documentación usando Doxygen.<ul>
+<li>doxygen ./doc/configure: Ejecuta Doxygen con el archivo de configuración ./doc/configure.</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">documentacion:</div>
+<div class="line">    doxygen ./doc/configure</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
+Limpieza: Las siguientes líneas tratarán sobre la limpieza.</h2>
+<ul>
+<li>clean : Esta es la regla clean. Limpia los archivos generados durante la compilación.<ul>
+<li>-rm $ (OBJ)/* $ (SRC)/*~ /*~ ./*~: Borra todos los archivos objeto, los archivos temporales y los archivos de respaldo en src,include y en el actual que es la carpeta principal.</li>
+</ul>
+</li>
+<li>mrproper : clean Este es el objetivo de la regla mrproper. Tiene un prerrequisito: el objetivo clean.<ul>
+<li>-rm $ (BIN)/* doc/html/* : Borrara todos los archivos en "bin" y la documentacion generada por doxygen en html, mas la regla "clean" ya que la tenemos como prerrequisito. Cuando ejecutas make mrproper, Make primero ejecutará la regla clean y después de que se complete la regla clean, Make ejecutará la regla mrproper.</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">clean :</div>
+<div class="line">    -rm $(OBJ)/* $(SRC)/*~ $(INCLUDE)/*~ ./*~</div>
+<div class="line"> </div>
+<div class="line">mrproper : clean</div>
+<div class="line">    -rm $(BIN)/* doc/html/*</div>
+</div><!-- fragment --><p><a class="el" href="index.html#md__2home_2enriquepm_2Documentos_2GitHub_2Ing__Informatica__2_21__Semestre_2ED_2P2_2cronologia_2Readme">Página principal</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

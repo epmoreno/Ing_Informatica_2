@@ -32,7 +32,7 @@ $(OBJ)/%.o: $(SRC)/%.cpp
 
 #************ Generación de documentación ******************
 documentacion:
-	doxygen ./doc/configure
+	doxygen doc/configure
 
 # ************ Limpieza ************
 clean :
